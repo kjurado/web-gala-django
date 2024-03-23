@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    {% load static %}
+    <link type='text/css' href='{% static "css/inicio.css"%}' rel='stylesheet'/>
+</head>
+<body>
+    <div class="contenedor">
+        <h2>GALAXY</h2>
+        <form action="{% url 'calcular_auras' %}" id="forma" name="forma" method="post">
+            {% csrf_token %}
+            <div class="elemento">
+                <label for="valorDkey">Valor de la Llave Diamante</label>
+                <input type="text" id="valorDkey" name="valorDkey" required="true"/>
+            </div>
+            <div class="elemento">
+                <label for="autoridad">Puntos de Autoridad</label>
+                <input type="text" id="autoridad" name="autoridad" required="true"/>
+            </div>
+            <div class="elemento">
+                <input type="submit" value="Calcular"/>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

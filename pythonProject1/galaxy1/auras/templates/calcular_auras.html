@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado de Cálculo de Auras</title>
+    {% load static %}
+    <link type='text/css' href='{% static "css/Calcular.css"%}' rel='stylesheet'/>
+</head>
+<body>
+    <div class="contenedor">
+        <table>
+            <caption>Calculadora de Gasto</caption>
+            <tr>
+                <th>Aura Actual</th>
+                
+                <th>Aura Siguiente</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>Nombre: {{ aura_actual.nombre }}</p>
+                </td>
+                
+                <td>
+                    <p>Nombre: {{ aura_siguiente.nombre }}</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="{{ aura_actual.imagen.url }}" alt="{{ aura_actual.nombre }}"> 
+                </td>
+               
+                <td>
+                    <img src="{{ aura_siguiente.imagen.url }}" alt="{{ aura_siguiente.nombre }}"> 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">Total: </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

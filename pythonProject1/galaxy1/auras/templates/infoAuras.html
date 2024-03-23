@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Auras</title>
+</head>
+<body>
+    <h1 align="center">Información de las Auras</h1>
+    <div>
+        <ul>
+            {% for aura in auras %}
+                <li>Aura {{aura.id}} </li>
+                <li>Nombre: {{aura.nombre}}</li>
+                <li>Puntos de Autoridad: {{aura.puntos_de_autoridad}} </li>
+            <img src="{{aura.imagen.url}}">
+            {% endfor %}
+        </ul>
+
+    </div>
+</body>
+</html>
